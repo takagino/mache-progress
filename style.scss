@@ -45,6 +45,55 @@ a {
   text-decoration: none;
 }
 
+/* btn */
+.btn {
+  display: inline-block;
+  width: 200px;
+  padding: (10/14)+em 0;
+  border-radius: 25px;
+  background-color: $color-main;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+
+  &--view {
+    background-color: $color-accent;
+  }
+}
+
+/* outline */
+.outline {
+
+  margin-bottom: (80/14)+em;
+
+  &__title {
+    margin-bottom: (45/38)+em;
+    color: $color-sub;
+    font-size: rem(38);
+    font-weight: normal;
+    line-height: (46/38);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 200px;
+      margin-top: (30/38)+em;
+      border-bottom: 2px solid $color-main;
+    }
+
+    &--center::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__em {
+    color: $color-main;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
 /* card */
 .card {
   background-color: $color-bg;
@@ -114,6 +163,23 @@ a {
     position: absolute;
     top: -80px;
     left: 0;
+  }
+
+  &__inner {
+    position: relative;
+    @include inner();
+    padding: (140/14)+em 0 (180/14)+em;
+  }
+
+  &__content {
+    width: (470/1140)*100%;
+  }
+
+  &__pic {
+    width: (843/1140)*100%;
+    position: absolute;
+    right: -(273/1140)*100%;
+    bottom: 0;
   }
 }
 
