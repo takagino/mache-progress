@@ -12,3 +12,13 @@ body {
   line-height: (24/14);
   letter-spacing: (25/1000)+em;
 }
+
+/* card */
+.card {}
+
+/* update */
+.update {
+  &__item {
+    width: (360/1140)*100%;
+  }
+}
