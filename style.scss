@@ -1,1 +1,14 @@
 @charset "utf-8";
+
+$color-text: #5a5a5a;
+
+@function rem($v) {
+  @return ($v/16)+rem;
+}
+
+body {
+  color: $color-text;
+  font-size: rem(14);
+  line-height: (24/14);
+  letter-spacing: (25/1000)+em;
+}
