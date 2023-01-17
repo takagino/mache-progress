@@ -64,6 +64,29 @@ a {
   line-height: 1.25;
 }
 
+/* message */
+.message {
+  height: 500px;
+}
+
+/* about */
+.about {
+  position: relative;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+.about::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: #ED145B;
+  transform: skewY(-1deg);
+  position: absolute;
+  top: -80px;
+  left: 0;
+}
+
 /* update */
 .update__item {
   width: 31.5789473684%;
