@@ -6,8 +6,13 @@ body {
 }
 
 /* card */
+.card__link:hover .card__pic::after {
+  bottom: 0;
+  transform: skewY(0);
+}
 .card__pic {
   position: relative;
+  overflow: hidden;
 }
 .card__pic::after {
   display: flex;
@@ -23,9 +28,11 @@ body {
   height: 100%;
   background-color: #ED145B;
   position: absolute;
-  top: 0;
+  bottom: -97%;
   left: 0;
   opacity: 0.8;
+  transform: skewY(1deg);
+  transition: all 0.3s;
 }
 
 /* update */

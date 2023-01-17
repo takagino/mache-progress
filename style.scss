@@ -23,8 +23,16 @@ body {
 
 /* card */
 .card {
+  &__link {
+    &:hover .card__pic::after {
+      bottom: 0;
+      transform: skewY(0);
+    }
+  }
+
   &__pic {
     position: relative;
+    overflow: hidden;
 
     &::after {
       @include flex(center, center);
@@ -37,9 +45,11 @@ body {
       height: 100%;
       background-color: $color-main;
       position: absolute;
-      top: 0;
+      bottom: -97%;
       left: 0;
       opacity: 0.8;
+      transform: skewY(1deg);
+      transition: all 0.3s;
     }
   }
 }
